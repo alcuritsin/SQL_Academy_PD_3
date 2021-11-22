@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQLAcademy_PD_3", "SQLAcademy_PD_3\SQLAcademy_PD_3.ssmssqlproj", "{C5BA3484-5508-4D2E-BAB6-637422FF10BC}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SELECTS", "SELECTS\SELECTS.ssmssqlproj", "{39F360D6-E06B-440E-A19B-89F2322A8E25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D61CF48B-841B-4C87-A509-6DC281642940}"
+	ProjectSection(SolutionItems) = preProject
+		Task\2021.11.08\Task.txt = Task\2021.11.08\Task.txt
+	EndProjectSection
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "JOIN_HW", "JOIN_HW\JOIN_HW.ssmssqlproj", "{B93AE180-6528-41C6-9DB6-319995B89F66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5BA3484-5508-4D2E-BAB6-637422FF10BC}.Default|Default.ActiveCfg = Default
+		{39F360D6-E06B-440E-A19B-89F2322A8E25}.Default|Default.ActiveCfg = Default
+		{0E838CE7-523A-4DBB-A6B6-3385B46C669C}.Default|Default.ActiveCfg = Default
+		{B93AE180-6528-41C6-9DB6-319995B89F66}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {786849F7-2903-41A2-A297-7A7B77815C04}
+	EndGlobalSection
+EndGlobal
