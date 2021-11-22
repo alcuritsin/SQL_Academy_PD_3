@@ -1,30 +1,30 @@
-USE SQL_Academy_PD_3;
+п»їUSE SQL_Academy_PD_3;
 GO
 
 SELECT * FROM SeasonBirth;
 
 SELECT 
-	N'Летом' AS N'Сезон',
-	COUNT(name) AS N'Количество'
+	N'Р›РµС‚РѕРј' AS N'РЎРµР·РѕРЅ',
+	COUNT(name) AS N'РљРѕР»РёС‡РµСЃС‚РІРѕ'
 FROM dbo.SeasonBirth AS t
-WHERE t.season = N'Лето'
+WHERE t.season = N'Р›РµС‚Рѕ'
 UNION ALL
 SELECT 
-	N'Зимой' AS N'Сезон',
-	COUNT(name)  AS N'Количество'
+	N'Р—РёРјРѕР№' AS N'РЎРµР·РѕРЅ',
+	COUNT(name)  AS N'РљРѕР»РёС‡РµСЃС‚РІРѕ'
 FROM dbo.SeasonBirth AS t
-WHERE t.season = N'Зима'
+WHERE t.season = N'Р—РёРјР°'
 UNION ALL
 SELECT 
-	N'Весной' AS N'Сезон',
-	COUNT(name) AS N'Количество'
+	N'Р’РµСЃРЅРѕР№' AS N'РЎРµР·РѕРЅ',
+	COUNT(name) AS N'РљРѕР»РёС‡РµСЃС‚РІРѕ'
 FROM dbo.SeasonBirth AS t
-WHERE t.season = N'Весна'
+WHERE t.season = N'Р’РµСЃРЅР°'
 UNION ALL
 SELECT 
-	N'Осенью' AS N'Сезон',
-	COUNT(name) AS N'Количество'
+	N'РћСЃРµРЅСЊСЋ' AS N'РЎРµР·РѕРЅ',
+	COUNT(name) AS N'РљРѕР»РёС‡РµСЃС‚РІРѕ'
 FROM dbo.SeasonBirth AS t
-WHERE t.season = N'Осень';
+WHERE t.season = N'РћСЃРµРЅСЊ';
 
 

@@ -1,10 +1,10 @@
-USE SQL_Academy_PD_3;
+п»їUSE SQL_Academy_PD_3;
 GO
 
---Для проверки
+--Р”Р»СЏ РїСЂРѕРІРµСЂРєРё
 SELECT
-	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'Преподаватель',
-	dp.discipline_name AS N'Дисциплина'
+	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ',
+	dp.discipline_name AS N'Р”РёСЃС†РёРїР»РёРЅР°'
 FROM
 	dbo.teachers AS tc,
 	dbo.disciplines AS dp,
@@ -14,9 +14,9 @@ WHERE
 	AND tc_dp.teacher = tc.teacher_id
 ORDER BY dp.discipline_name;
 
---Вывести всех преподавателей, по дисциплине "Hardware-PC"
+--Р’С‹РІРµСЃС‚Рё РІСЃРµС… РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№, РїРѕ РґРёСЃС†РёРїР»РёРЅРµ "Hardware-PC"
 SELECT
-	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'Преподаватель'
+	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ'
 FROM
 	dbo.teachers AS tc,
 	dbo.disciplines AS dp,
@@ -26,9 +26,9 @@ WHERE
 	AND tc.teacher_id = tc_dp.teacher
 	AND dp.discipline_name = N'Hardware-PC';
 
---Вывести всех преподавателей, по дисциплине "Процедурне программирование на языке C++"
+--Р’С‹РІРµСЃС‚Рё РІСЃРµС… РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№, РїРѕ РґРёСЃС†РёРїР»РёРЅРµ "РџСЂРѕС†РµРґСѓСЂРЅРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° СЏР·С‹РєРµ C++"
 SELECT
-	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'Преподаватель'
+	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ'
 FROM
 	dbo.teachers AS tc,
 	dbo.disciplines AS dp,
@@ -36,4 +36,4 @@ FROM
 WHERE
 	dp.discipline_id = tc_dp.discipline
 	AND tc.teacher_id = tc_dp.teacher
-	AND dp.discipline_name = N'Процедурное программирование на языке C++';
+	AND dp.discipline_name = N'РџСЂРѕС†РµРґСѓСЂРЅРѕРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° СЏР·С‹РєРµ C++';

@@ -1,7 +1,7 @@
-USE SQL_Academy_PD_3;
+п»їUSE SQL_Academy_PD_3;
 GO
 
---Для проверки
+--Р”Р»СЏ РїСЂРѕРІРµСЂРєРё
 SELECT 
 	dp.discipline_name,
 	tc.last_name
@@ -14,10 +14,10 @@ WHERE
 	AND tc_dp.teacher = tc.teacher_id
 ORDER BY dp.discipline_name;
 
---Посчитать количество преподавателей по каждой из дисциплин
+--РџРѕСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№ РїРѕ РєР°Р¶РґРѕР№ РёР· РґРёСЃС†РёРїР»РёРЅ
 SELECT 
-	dp.discipline_name AS N'Дисциплина',
-	COUNT(tc_dp.teacher) AS N'Количество преподавателей'
+	dp.discipline_name AS N'Р”РёСЃС†РёРїР»РёРЅР°',
+	COUNT(tc_dp.teacher) AS N'РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№'
 FROM
 	dbo.disciplines AS dp,
 	dbo.teacher_descipline AS tc_dp

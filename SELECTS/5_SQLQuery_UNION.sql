@@ -1,4 +1,4 @@
-USE SQL_Academy_PD_3;
+ï»¿USE SQL_Academy_PD_3;
 GO
 
 
@@ -21,6 +21,6 @@ WHERE DATEDIFF(YEAR,st.birth_date, GETDATE()) BETWEEN 20 and 30;
 	
 	--Age >=20
 	--AND Age <=30
---ORDER BY N'Âîçðàñò';
+--ORDER BY N'Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚';
 
 

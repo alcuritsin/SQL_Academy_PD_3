@@ -1,18 +1,18 @@
-USE SQL_Academy_PD_3;
+п»їUSE SQL_Academy_PD_3;
 GO
 
 --INSERT INTO students
 --	(last_name, first_name, midle_name, birth_date,year_study, rating,attendance,student_group)
 --VALUES
---	(N'Васильев', N'Сергей', N'Александрович', '1975-12-25', 1,91,95, 3),
---	(N'Васильевf', N'Маргорита', N'Сергеевна', '1977-11-16', 2,95,97, 4)
+--	(N'Р’Р°СЃРёР»СЊРµРІ', N'РЎРµСЂРіРµР№', N'РђР»РµРєСЃР°РЅРґСЂРѕРІРёС‡', '1975-12-25', 1,91,95, 3),
+--	(N'Р’Р°СЃРёР»СЊРµРІf', N'РњР°СЂРіРѕСЂРёС‚Р°', N'РЎРµСЂРіРµРµРІРЅР°', '1977-11-16', 2,95,97, 4)
 
 
---1. Вывести на экран всех студентов старше преподавателей;
---	Вспомогательный запрос. Вывести на экран дату рождения самого старшего преподавателя.
+--1. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ СЃС‚Р°СЂС€Рµ РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№;
+--	Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ Р·Р°РїСЂРѕСЃ. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ РґР°С‚Сѓ СЂРѕР¶РґРµРЅРёСЏ СЃР°РјРѕРіРѕ СЃС‚Р°СЂС€РµРіРѕ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ.
 SELECT MIN(teachers.birth_date) FROM teachers;
 
 SELECT 
-	students.last_name +' '+students.first_name+' '+students.midle_name AS 'Студент'
+	students.last_name +' '+students.first_name+' '+students.midle_name AS 'РЎС‚СѓРґРµРЅС‚'
 FROM students
 WHERE students.birth_date < (SELECT MIN(teachers.birth_date) FROM teachers);

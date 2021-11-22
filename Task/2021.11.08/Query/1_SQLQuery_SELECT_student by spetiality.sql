@@ -1,9 +1,9 @@
-USE SQL_Academy_PD_3;
+п»їUSE SQL_Academy_PD_3;
 GO
 
---Для проверки
+--Р”Р»СЏ РїСЂРѕРІРµСЂРєРё
 SELECT
-	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'Программисты',
+	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'РџСЂРѕРіСЂР°РјРјРёСЃС‚С‹',
 	sp.spetiality_name
 FROM
 	dbo.students AS s, dbo.spetialities AS sp, dbo.groups AS g
@@ -13,32 +13,32 @@ WHERE
 ORDER BY
 	sp.spetiality_name;
 
---Вывести всех студентов, обучающихся по курсу "Программирование"
+--Р’С‹РІРµСЃС‚Рё РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ, РѕР±СѓС‡Р°СЋС‰РёС…СЃСЏ РїРѕ РєСѓСЂСЃСѓ "РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ"
 SELECT
-	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'Программисты'
+	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'РџСЂРѕРіСЂР°РјРјРёСЃС‚С‹'
 FROM
 	dbo.students AS s, dbo.spetialities AS sp, dbo.groups AS g
 WHERE
 	s.student_group = g.group_id
 	AND g.spetiality = sp.spetiality_id
-	AND sp.spetiality_name = N'Программирование';
+	AND sp.spetiality_name = N'РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ';
 
---Вывести всех студентов, обучающихся по курсу "Сетевые технологии"
+--Р’С‹РІРµСЃС‚Рё РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ, РѕР±СѓС‡Р°СЋС‰РёС…СЃСЏ РїРѕ РєСѓСЂСЃСѓ "РЎРµС‚РµРІС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё"
 SELECT
-	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'Сетевеки'
+	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'РЎРµС‚РµРІРµРєРё'
 FROM
 	dbo.students AS s, dbo.spetialities AS sp, dbo.groups AS g
 WHERE
 	s.student_group = g.group_id
 	AND g.spetiality = sp.spetiality_id
-	AND sp.spetiality_name = N'Сетевые технологии';
+	AND sp.spetiality_name = N'РЎРµС‚РµРІС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё';
 
---Вывести всех студентов, обучающихся по курсу "Компьютерная графика"
+--Р’С‹РІРµСЃС‚Рё РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ, РѕР±СѓС‡Р°СЋС‰РёС…СЃСЏ РїРѕ РєСѓСЂСЃСѓ "РљРѕРјРїСЊСЋС‚РµСЂРЅР°СЏ РіСЂР°С„РёРєР°"
 SELECT
-	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'Дизайнеры'
+	s.last_name + ' ' + s.first_name + ' ' + s.midle_name AS N'Р”РёР·Р°Р№РЅРµСЂС‹'
 FROM
 	dbo.students AS s, dbo.spetialities AS sp, dbo.groups AS g
 WHERE
 	s.student_group = g.group_id
 	AND g.spetiality = sp.spetiality_id
-	AND sp.spetiality_name = N'Компьютерная графика и дизайн';
+	AND sp.spetiality_name = N'РљРѕРјРїСЊСЋС‚РµСЂРЅР°СЏ РіСЂР°С„РёРєР° Рё РґРёР·Р°Р№РЅ';

@@ -1,20 +1,20 @@
-USE SQL_Academy_PD_3;
+п»їUSE SQL_Academy_PD_3;
 GO
 
---Вывести количество студентов каждой группы
+--Р’С‹РІРµСЃС‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ РєР°Р¶РґРѕР№ РіСЂСѓРїРїС‹
 SELECT
 	g.group_name,
-	COUNT(st.student_group) AS N'Количество студентов'
+	COUNT(st.student_group) AS N'РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ'
 FROM
 	students AS st, groups AS g
 WHERE
 	st.student_group = g.group_id
 GROUP BY g.group_name;
 
---Вывести количество студентов на каждой специальности
+--Р’С‹РІРµСЃС‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ РЅР° РєР°Р¶РґРѕР№ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё
 SELECT
 	sp.spetiality_name,
-	COUNT(st.student_group) AS N'Количество студентов'
+	COUNT(st.student_group) AS N'РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ'
 FROM
 	students AS st, groups AS g, spetialities AS sp
 WHERE

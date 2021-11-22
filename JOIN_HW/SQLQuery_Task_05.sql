@@ -1,14 +1,14 @@
-USE SQL_Academy_PD_3;
+п»їUSE SQL_Academy_PD_3;
 GO
 
---5. Запросы 6, 7 попробовать выполнить при помощи JOIN, 
---   и сравнить с предыдущими запросами (без JOIN)
+--5. Р—Р°РїСЂРѕСЃС‹ 6, 7 РїРѕРїСЂРѕР±РѕРІР°С‚СЊ РІС‹РїРѕР»РЅРёС‚СЊ РїСЂРё РїРѕРјРѕС‰Рё JOIN, 
+--   Рё СЃСЂР°РІРЅРёС‚СЊ СЃ РїСЂРµРґС‹РґСѓС‰РёРјРё Р·Р°РїСЂРѕСЃР°РјРё (Р±РµР· JOIN)
 
---	Вывести всех преподавателей, по дисциплине "Hardware-PC"
---  Объединение с помощью WHERE
+--	Р’С‹РІРµСЃС‚Рё РІСЃРµС… РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№, РїРѕ РґРёСЃС†РёРїР»РёРЅРµ "Hardware-PC"
+--  РћР±СЉРµРґРёРЅРµРЅРёРµ СЃ РїРѕРјРѕС‰СЊСЋ WHERE
 SELECT
-	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'Преподаватель',
-	dp.discipline_name AS N'Дисциплина'
+	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ',
+	dp.discipline_name AS N'Р”РёСЃС†РёРїР»РёРЅР°'
 FROM
 	dbo.teachers AS tc,
 	dbo.disciplines AS dp,
@@ -18,10 +18,10 @@ WHERE
 	AND tc.teacher_id = tc_dp.teacher
 	AND dp.discipline_name = N'Hardware-PC';
 
---  Объединение с помощью JOIN
+--  РћР±СЉРµРґРёРЅРµРЅРёРµ СЃ РїРѕРјРѕС‰СЊСЋ JOIN
 SELECT 
-	tc.last_name + N' ' + tc.first_name + N' ' + tc.midle_name  AS N'Преподаватель',
-	dp.discipline_name AS N'Дисциплина'
+	tc.last_name + N' ' + tc.first_name + N' ' + tc.midle_name  AS N'РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ',
+	dp.discipline_name AS N'Р”РёСЃС†РёРїР»РёРЅР°'
 FROM
 	dbo.teachers AS tc
 JOIN dbo.teacher_descipline AS tc_dp
@@ -30,12 +30,12 @@ JOIN dbo.disciplines AS dp
 	ON (dp.discipline_id = tc_dp.discipline)
 WHERE dp.discipline_name = N'Hardware-PC';
 
---7. Вывести всех преподавателей, по дисциплине "Процедурне программирование на языке C++";
+--7. Р’С‹РІРµСЃС‚Рё РІСЃРµС… РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№, РїРѕ РґРёСЃС†РёРїР»РёРЅРµ "РџСЂРѕС†РµРґСѓСЂРЅРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° СЏР·С‹РєРµ C++";
 
---  Объединение с помощью WHERE
+--  РћР±СЉРµРґРёРЅРµРЅРёРµ СЃ РїРѕРјРѕС‰СЊСЋ WHERE
 SELECT
-	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'Преподаватель',
-	dp.discipline_name AS N'Дисциплина'
+	tc.last_name + ' ' + tc.first_name + ' ' + tc.midle_name AS N'РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ',
+	dp.discipline_name AS N'Р”РёСЃС†РёРїР»РёРЅР°'
 FROM
 	dbo.teachers AS tc,
 	dbo.disciplines AS dp,
@@ -43,16 +43,16 @@ FROM
 WHERE
 	dp.discipline_id = tc_dp.discipline
 	AND tc.teacher_id = tc_dp.teacher
-	AND dp.discipline_name = N'Процедурное программирование на языке C++';
+	AND dp.discipline_name = N'РџСЂРѕС†РµРґСѓСЂРЅРѕРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° СЏР·С‹РєРµ C++';
 
---  Объединение с помощью JOIN
+--  РћР±СЉРµРґРёРЅРµРЅРёРµ СЃ РїРѕРјРѕС‰СЊСЋ JOIN
 SELECT 
-	tc.last_name + N' ' + tc.first_name + N' ' + tc.midle_name  AS N'Преподаватель',
-	dp.discipline_name AS N'Дисциплина'
+	tc.last_name + N' ' + tc.first_name + N' ' + tc.midle_name  AS N'РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ',
+	dp.discipline_name AS N'Р”РёСЃС†РёРїР»РёРЅР°'
 FROM
 	dbo.teachers AS tc
 JOIN dbo.teacher_descipline AS tc_dp
 	ON (tc.teacher_id = tc_dp.teacher)
 JOIN dbo.disciplines AS dp
 	ON (dp.discipline_id = tc_dp.discipline)
-WHERE dp.discipline_name = N'Процедурное программирование на языке C++';
+WHERE dp.discipline_name = N'РџСЂРѕС†РµРґСѓСЂРЅРѕРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° СЏР·С‹РєРµ C++';
